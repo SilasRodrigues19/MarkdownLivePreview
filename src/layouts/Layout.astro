@@ -1,0 +1,105 @@
+---
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width' />
+    <link rel='icon' type='image/svg+xml' href='/favicon.svg' />
+    <meta name='generator' content={Astro.generator} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
+<style is:global>
+  html {
+    font-family: system-ui, sans-serif;
+    background-color: #f6f6f6;
+		overflow: overlay;
+  }
+  h6,
+  h5,
+  h4,
+  h3,
+  h2,
+  h1 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  h5 {
+    font-size: 1.25rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+  code {
+		font-family: 'Fira Code', Consolas, monospace;
+		font-size: 14px;
+		background-color: #282c34;
+		color: #abb2bf;
+		padding: 10px;
+		border-radius: 5px;
+		line-height: 1.5;
+		white-space: pre-wrap;
+		word-wrap: break-word;
+	}
+
+::-webkit-scrollbar {
+  width: 10px; 
+}
+
+::-webkit-scrollbar-track {
+  background-color: transparent; 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fff;
+}
+
+@media all and (hover: none), (pointer: coarse) {
+  scrollbar-color: #1F2133 transparent; 
+  scrollbar-width: thin; 
+}
+
+</style>
+
+<script
+  is:global
+  src='https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js'
+></script>
+<script
+  is:global
+  src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/codemirror.min.js'
+></script>
+<script
+  is:global
+  src='https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.62.3/mode/xml/xml.min.js'
+></script>
+<script src='../scripts/script.js'></script>
