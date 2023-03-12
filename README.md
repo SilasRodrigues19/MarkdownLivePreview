@@ -12,12 +12,12 @@
     <img src="./public/favicon.svg" alt="Logo" width="100" height="80">
   </a>
 
-  <h3 align="center">GPT3 Chat Integration</h3>
+  <h3 align="center">Markdown Live Preview</h3>
 
   <p align="center">
-    This project contains code for integrating with the OpenAI API to power a conversational ChatBot using the GPT-3 Language Model.
+    A simple markdown live preview with HTML tags autocomplete
     <br />
-    <a href="https://gpt-3-chat-two.vercel.app/">Demo</a>
+    <a href="https://markdown-live-preview.vercel.app/">Demo</a>
     <a href="https://github.com/SilasRodrigues19/MarkdownLivePreview/issues">Report Bug</a>
   </p>
 </p>
@@ -35,7 +35,6 @@
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
@@ -49,14 +48,16 @@
 
 ## About The Project
 
-[![Preview][product-screenshot]](https://gpt-3-chat-two.vercel.app/)<hr>
+[![Preview][product-screenshot]](https://markdown-live-preview.vercel.app/)<hr>
 
-This project was developed to learn how to integrate with the OpenAI API and build a chat using Natural Language.
+Markdown Live Preview is a project that provides a live preview of Markdown files as they are being edited. This tool allows users to see the rendered output of their Markdown content in real-time.
 
 How to use:
 
-- **Pergunta**: write your question and click the "Send" button for GPT-3 to answer you.
-- **Resultado**: in this text area, your answer will be displayed.
+- Type using markdown and see the result in real time, supports HTML tag autocomplete by typing the desired tag + tab key.
+
+For example, to create an HTML `<h1>` tag, type `h1` and press the `tab key`. This will automatically generate the `<h1></h1>` code, allowing you to fill in the content of the tag.
+
 
 ### Built With
 
@@ -67,35 +68,15 @@ Technologies used in the project.
 - [Astro](https://astro.build/)
 - [Tailwind CSS](https://tailwindcss.com)
 
-### API
+### Libs
 
-- [Open AI Completions Endpoint](https://platform.openai.com/docs/guides/completion/introduction)
+- [Code Mirror](https://github.com/codemirror/codemirror5)
+- [Showdown](https://showdownjs.com/)
+- [XML JS](https://github.com/nashwaan/xml-js)
 
 <!-- GETTING STARTED -->
 
 ## Getting Started
-
-### Prerequisites
-
-1. Create an account on OpenAI in the link below
-
-```sh
-https://beta.openai.com/signup
-```
-
-2. Log in to OpenAI and access the following link to get your API Key
-
-```sh
-https://platform.openai.com/account/api-keys
-```
-
-3. Copy the `Secret Key` code that will be used in the .env.example file
-
-```sh
-PUBLIC_CHATGPT_API_KEY=YOUR_SECRET_KEY
-```
-
-4. Rename the `.env.example` file to `.env` and restart the application
 
 ### Installation
 
@@ -103,7 +84,7 @@ PUBLIC_CHATGPT_API_KEY=YOUR_SECRET_KEY
    ```sh
    git clone https://github.com/SilasRodrigues19/MarkdownLivePreview.git
    ```
-2. Access the folder with `cd ChatGPTIntegration`
+2. Access the folder with `cd MarkdownLivePreview`
 
 3. Install dependencies
    ```sh
@@ -161,4 +142,4 @@ Project Link: [https://github.com/SilasRodrigues19/MarkdownLivePreview](https://
 [product-screenshot]: ./public/screenshots/preview.png
 
 <br><hr>
-[🔼 Back to top](#GPT3-Chat-Integration)
+[🔼 Back to top](#Markdown-Live-Preview)
