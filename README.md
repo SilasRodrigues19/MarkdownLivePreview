@@ -58,7 +58,6 @@ How to use:
 
 For example, to create an HTML `<h1>` tag, type `h1` and press the `tab key`. This will automatically generate the `<h1></h1>` code, allowing you to fill in the content of the tag.
 
-
 ### Built With
 
 Technologies used in the project.
